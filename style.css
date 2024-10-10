@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 6px;
+    padding: 5px;
+    align-items: baseline;
+    border: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #1B3566, black);
+    background-color: #1b357a;
+    height: 2000px; /* Altura total da tela */
+    margin: 0; /* Remove margens padrão */
+    background: linear-gradient(65deg,#00BFFF,#7bdcfa, #fe9e8e,#f32d58e7, #1B3566,#0303a56e); /* Degrade de cores */
+    background-size: 400% 400%; /* Tamanho do fundo para animação */
+    animation: gradient 55s ease infinite; /* Animação do degrade */
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@keyframes gradient {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+header {
+    
+    color: #fff;
+    padding: 5rem 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+
+.container {
+    
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 30%; /* Cresce, encolhe e tem uma base de 30% */
+    min-width: 250px; /* Largura mínima para as colunas */
+    text-align: center;
+    border-radius: 50px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav ul li {
+    margin-right: 30px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: black;
+    margin: 25px;
+    padding: 15px;
+    border-radius: 25px;
+    border-bottom: 20px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #fff;
+    font-size: larger;
+}
+
+section {
+    padding: 5rem ;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: #fff;
+}
+
+.grid {
+    display: inline-flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    background-color: black;
+    background-size: 250px;
+    border-radius: 20px;
+       
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 155px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 0.7rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    font-size: large;
+    padding: 1rem 0;
+    border-radius: 40px;
+}
+ 
+.caixa-texto {
+    width: 300px;
+    padding: 20px;
+    background-color: #1B3566;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-conteudo {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #1B3566;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Escondido inicialmente */
+}

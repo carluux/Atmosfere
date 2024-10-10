@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.coluna {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 30%; /* Cresce, encolhe e tem uma base de 30% */
+    min-width: 250px; /* Largura mínima para as colunas */
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Voltar ao Início</title>
+    <style>
+        body {
+            height: 2000px; /* Para permitir rolagem */
+            background: linear-gradient(to bottom, #f0f0f0, #ccc);
+        }
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente escondido */
+        }
+    </style>
+</head>
+<body>
+    <button id="scrollToTop" onclick="scrollToTop()">Voltar ao Início</button>
+
+    <script>
+        // Função para rolar a página para o topo
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Rolagem suave
+            });
+        }
+
+        // Mostrar o botão quando o usuário rolar para baixo
+        window.onscroll = function() {
+            const button = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block"; // Mostrar o botão
+            } else {
+                button.style.display = "none"; // Esconder o botão
+            }
+        };
+    </script>
+
+</body>
+</html>
